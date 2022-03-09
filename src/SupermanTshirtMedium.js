@@ -6,12 +6,13 @@ const useStyles = makeStyles(({
     
 }));
 
-export default function Base(props) {
+export default function SupermanTShirtMedium(props) {
     const classes = useStyles(props);
-
     return (
         <div>
-            Hello Able!
+            <h1>
+                Medium
+            </h1>
         </div>
-    );
-}
+    )
+};
