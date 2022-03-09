@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import supermanimg from './img/supermanImage.jpeg';
+import parchedLogo from './img/parchedLogo.png';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(({
     wrap: {
@@ -15,7 +17,6 @@ const useStyles = makeStyles(({
         margin: "3rem 1rem 1rem 1rem",
         height: "auto",
         width: "auto",
-        backgroundColor: "rgba(255, 255, 255, 0.2)",
         color: "white",
     },
     header: {
@@ -33,20 +34,99 @@ const useStyles = makeStyles(({
         margin: "0",
     },
     desc: {
-        fontFamily: "Roboto-Regular",
+        fontFamily: "Roboto-Medium",
         fontSize: "1.25rem",
         margin: "0",
     },
-    shirtImg: {
+    subDesc: {
+        fontFamily: "Roboto-Regular",
+        fontSize: "1rem",
+        margin: "0",
+    },
+    image: {
+        display: "flex",
+        justifyContent: "center",
         width: "100%",
+        backgroundColor: "#F4F6F5",
+    },
+    shirtImg: {
+        width: "50%",
+        maxWidth: "500px",
+        margin: "0 0 0 6rem",
+    },
+    parchedLogo: {
+        width: "70px",
+        height: "fit-content",
+        margin: "1rem 0 1rem 1rem",
     },
     descSection: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        margin: "1rem 0"
+        margin: "1rem 0",
+        alignItems: "center"
+    },
+    priceContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        margin: "1rem 0 0.5rem 0"
+    },
+    color: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        margin: "0",
+    },
+    verticalSection: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "0 0 1rem 0"
+    },
+    button: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row-reverse"
+    },
+    hr: {
+        height: "1px",
+        width: "100%",
+        margin: "0",
+        padding: "0",
+        backgroundColor: "white",
+    },
+    colorCircle: {
+        height: "2rem",
+        width: "2rem",
+        backgroundColor: '#1D5289',
+        border: "solid 2px white",
+        borderRadius: "50%",
+        margin: "0 0 0 1rem",
     }
 }));
+
+const PrimaryButton = withStyles((theme) => ({
+    root: {
+        fontFamily: "Roboto-Bold",
+        fontSize: '1rem',
+        backgroundColor: "#FFFFFF",
+        borderRadius: "6px",
+        boxSizing: "border-box",
+        padding: "4px 16px",
+        width: "auto",
+        "&:hover" :{
+            backgroundColor: "#333333",
+            border: "4px solid #333333",
+        },
+    },
+    text: {
+        color: "#1F2223",
+    },
+    label:{
+        textTransform:"capitalize",
+    }
+}))(Button);
 
 export default function SupermanTShirtSmall(props) {
     const classes = useStyles(props);
@@ -57,15 +137,58 @@ export default function SupermanTShirtSmall(props) {
                     <p className={classes.h1}>Item Information</p>
                 </div>
                 <div className={classes.image}>
-                    <img className={classes.shirtImg} id="Superman T-Shirt Image" alt="Superman T-Shirt" src={supermanimg}/>
+                    <img className={classes.shirtImg} id="Clothing Image" alt="Superman T-Shirt" src={supermanimg}/>
+                    <img className={classes.parchedLogo} id="Brand Name" alt="Parched" src={parchedLogo}/>
                 </div>
                 <p className={classes.h1}>Providence Superman T-Shirt</p>
-                <hr className={classes.hr}/>
+                <div className={classes.hr}/>
+                <div className={classes.verticalSection}>
+                    <div className={classes.descSection2}>
+                        <p className={classes.h2}>Brand</p>
+                        <p className={classes.desc}>Parched</p>
+                    </div>
+                    <div className={classes.button}>
+                        <PrimaryButton><a style={{textDecoration: "none", color: "#1F2223",}} href="https://www.parchedusa.com/" target="_blank">Visit Website</a></PrimaryButton>
+                    </div>
+                </div>
+                <div className={classes.hr}/>
                 <div className={classes.descSection}>
-                    <p className={classes.h2}>title</p>
+                    <p className={classes.h2}>Category</p>
+                    <p className={classes.desc}>Unisex T-Shirt</p>
+                </div>
+                <div className={classes.hr}/>
+                <div className={classes.descSection}>
+                    <p className={classes.h2}>Gender</p>
+                    <p className={classes.desc}>Unisex</p>
+                </div>
+                <div className={classes.hr}/>
+                <div className={classes.descSection}>
+                    <p className={classes.h2}>Size</p>
+                    <p className={classes.desc}>Small</p>
+                </div>
+                <div className={classes.hr}/>
+                <div className={classes.verticalSection}>
+                    <div className={classes.priceContainer}>
+                        <p className={classes.h2}>Price</p>
+                        <p className={classes.desc}>$26.00</p>
+                    </div>
+                    <div className={classes.button}>
+                        <p className={classes.subDesc}>Tax included</p> 
+                    </div>
+                </div>
+                <div className={classes.hr}/>
+                <div className={classes.descSection}>
+                    <p className={classes.h2}>Color</p>
+                    <div className={classes.color}>
+                        <p className={classes.desc}>True Royal Blue</p>
+                        <div className={classes.colorCircle}/>
+                    </div>
+                </div>
+                <div className={classes.hr}/>
+                <div className={classes.descSection}>
+                    <p className={classes.h2}>Pattern</p>
                     <p className={classes.desc}>desc</p>
                 </div>
-                <hr/>
             </div>
         </div>
     )
