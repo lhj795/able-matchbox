@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<SupermanTShirtSmall/>} />
-        <Route path="/superman-tshirt-medium" element={<SupermanTShirtMedium/>} />
+        <Route path="/small" element={<SupermanTShirtSmall/>} />
+        <Route path="/medium" element={<SupermanTShirtMedium/>} />
       </Routes>
     </Router>
   );
