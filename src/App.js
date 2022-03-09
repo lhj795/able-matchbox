@@ -9,9 +9,9 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<SupermanTShirtSmall/>} />
-        <Route path="/small" element={<SupermanTShirtSmall/>} />
-        <Route path="/medium" element={<SupermanTShirtMedium/>} />
+        <Route path="/" element={<SupermanTShirtSmall/>} />
+        {/* <Route path="small" element={<SupermanTShirtSmall/>} /> */}
+        <Route path="medium" element={<SupermanTShirtMedium/>} />
       </Routes>
     </Router>
   );
