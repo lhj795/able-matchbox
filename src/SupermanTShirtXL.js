@@ -204,7 +204,7 @@ const PrimaryButton = withStyles((theme) => ({
     }
 }))(Button);
 
-export default function SupermanTShirtMedium(props) {
+export default function SupermanTShirtXL(props) {
     const classes = useStyles(props);
     return (
         <div className={classes.wrap}>
@@ -240,7 +240,7 @@ export default function SupermanTShirtMedium(props) {
                 <div className={classes.hr}/>
                 <div className={classes.descContainer}>
                     <p className={classes.h2}>Size</p>
-                    <p className={classes.desc}>Medium</p>
+                    <p className={classes.desc}>Extra Large</p>
                 </div>
                 <div className={classes.hr}/>
                 <div className={classes.verticalContainer}>

@@ -13,12 +13,11 @@ const useStyles = makeStyles(({
         backgroundColor: "#1F2223",
         margin: "0",
         width: "100vw",
-        height: "100vh",
         overflow: "scroll",
         fontSize: "100%",
     },
     body: {
-        margin: "3rem 1rem 1rem 1rem",
+        margin: "3rem 1rem 3rem 1rem",
         height: "auto",
         width: "auto",
         color: "#F4F6F5",
@@ -70,6 +69,10 @@ const useStyles = makeStyles(({
         margin: "0",
     },
     img: {
+        width: "100%",
+        backgroundColor: "#F4F6F5",
+    },
+    patternImgContainer: {
         display: "flex",
         justifyContent: "center",
         width: "100%",
@@ -78,7 +81,7 @@ const useStyles = makeStyles(({
     shirtImg: {
         width: "50%",
         maxWidth: "500px",
-        margin: "0 0 0 6rem",
+        margin: "0 0 0 25%",
     },
     patternImg: {
         width: "50%",
@@ -87,8 +90,8 @@ const useStyles = makeStyles(({
     },
     parchedLogo: {
         width: "70px",
-        height: "max-content",
-        margin: "1rem 0 1rem 1rem",
+        height: "23.859px",
+        margin: "0 0 40% 0",
     },
     descContainer: {
         display: "flex",
@@ -268,7 +271,7 @@ export default function SupermanTShirtSmall(props) {
                 <div className={classes.verticalContainer}>
                     <p className={classes.h2}>Pattern</p>
                     <p className={classes.h3}>Detail</p>
-                    <div className={classes.img}>
+                    <div className={classes.patternImgContainer}>
                         <img className={classes.patternImg} id="Clothing Image" alt="Superman T-Shirt" src={patternImg}/>
                     </div>
                     <div className={classes.color}>
