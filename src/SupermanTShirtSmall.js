@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import supermanimg from './img/supermanImage.jpeg';
 import parchedLogo from './img/parchedLogo.png';
@@ -148,7 +147,7 @@ export default function SupermanTShirtSmall(props) {
                         <p className={classes.desc}>Parched</p>
                     </div>
                     <div className={classes.button}>
-                        <PrimaryButton><a style={{textDecoration: "none", color: "#1F2223",}} href="https://www.parchedusa.com/" target="_blank">Visit Website</a></PrimaryButton>
+                        <PrimaryButton><a style={{textDecoration: "none", color: "#1F2223",}} href="https://www.parchedusa.com/" target="_blank" rel="noreferrer">Visit Website</a></PrimaryButton>
                     </div>
                 </div>
                 <div className={classes.hr}/>
