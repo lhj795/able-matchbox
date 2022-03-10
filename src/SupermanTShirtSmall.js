@@ -55,7 +55,7 @@ const useStyles = makeStyles(({
     },
     parchedLogo: {
         width: "70px",
-        height: "fit-content",
+        height: "max-content",
         margin: "1rem 0 1rem 1rem",
     },
     descContainer: {
@@ -85,7 +85,7 @@ const useStyles = makeStyles(({
         alignItems: "center",
         margin: "0",
     },
-    verticalSection: {
+    verticalContainer: {
         display: "flex",
         flexDirection: "column",
         margin: "0 0 1rem 0"
@@ -148,7 +148,7 @@ export default function SupermanTShirtSmall(props) {
                 </div>
                 <p className={classes.h1}>Providence Superman T-Shirt</p>
                 <div className={classes.hr}/>
-                <div className={classes.verticalSection}>
+                <div className={classes.verticalContainer}>
                     <div className={classes.brandContainer}>
                         <p className={classes.h2}>Brand</p>
                         <p className={classes.desc}>Parched</p>
@@ -173,7 +173,7 @@ export default function SupermanTShirtSmall(props) {
                     <p className={classes.desc}>Small</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.verticalSection}>
+                <div className={classes.verticalContainer}>
                     <div className={classes.priceContainer}>
                         <p className={classes.h2}>Price</p>
                         <p className={classes.desc}>$26.00</p>

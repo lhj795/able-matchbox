@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
 import SupermanTShirtSmall from "./SupermanTShirtSmall.js";
-import SupermanTShirtMedium from "./SupermanTshirtMedium.js";
+import SupermanTShirtMedium from "./SupermanTShirtMedium.js";
 import './App.css';
 
 function App() {
