@@ -1,16 +1,17 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import supermanimg from './img/supermanImage.jpeg';
+import supermanimg from './img/supermanImg.jpeg';
 import parchedLogo from './img/parchedLogo.png';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(({
     wrap: {
-        backgroundColor: "red",
+        backgroundColor: "blue",
         margin: "0",
         width: "100vw",
         height: "100vh",
         overflow: "scroll",
+        fontSize: "100%",
     },
     body: {
         margin: "3rem 1rem 1rem 1rem",
@@ -42,7 +43,7 @@ const useStyles = makeStyles(({
         fontSize: "1rem",
         margin: "0",
     },
-    image: {
+    img: {
         display: "flex",
         justifyContent: "center",
         width: "100%",
@@ -55,14 +56,21 @@ const useStyles = makeStyles(({
     },
     parchedLogo: {
         width: "70px",
-        height: "fit-content",
+        height: "max-content",
         margin: "1rem 0 1rem 1rem",
     },
-    descSection: {
+    descContainer: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         margin: "1rem 0",
+        alignItems: "center"
+    },
+    brandContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        margin: "1rem 0 0.5rem 0",
         alignItems: "center"
     },
     priceContainer: {
@@ -78,7 +86,7 @@ const useStyles = makeStyles(({
         alignItems: "center",
         margin: "0",
     },
-    verticalSection: {
+    verticalContainer: {
         display: "flex",
         flexDirection: "column",
         margin: "0 0 1rem 0"
@@ -127,7 +135,7 @@ const PrimaryButton = withStyles((theme) => ({
     }
 }))(Button);
 
-export default function SupermanTShirtMedium(props) {
+export default function SupermanTShirtSmall(props) {
     const classes = useStyles(props);
     return (
         <div className={classes.wrap}>
@@ -135,14 +143,14 @@ export default function SupermanTShirtMedium(props) {
                 <div className={classes.header}>
                     <p className={classes.h1}>Item Information</p>
                 </div>
-                <div className={classes.image}>
+                <div className={classes.img}>
                     <img className={classes.shirtImg} id="Clothing Image" alt="Superman T-Shirt" src={supermanimg}/>
                     <img className={classes.parchedLogo} id="Brand Name" alt="Parched" src={parchedLogo}/>
                 </div>
                 <p className={classes.h1}>Providence Superman T-Shirt</p>
                 <div className={classes.hr}/>
-                <div className={classes.verticalSection}>
-                    <div className={classes.descSection2}>
+                <div className={classes.verticalContainer}>
+                    <div className={classes.brandContainer}>
                         <p className={classes.h2}>Brand</p>
                         <p className={classes.desc}>Parched</p>
                     </div>
@@ -151,22 +159,22 @@ export default function SupermanTShirtMedium(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Category</p>
                     <p className={classes.desc}>Unisex T-Shirt</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Gender</p>
                     <p className={classes.desc}>Unisex</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Size</p>
                     <p className={classes.desc}>Small</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.verticalSection}>
+                <div className={classes.verticalContainer}>
                     <div className={classes.priceContainer}>
                         <p className={classes.h2}>Price</p>
                         <p className={classes.desc}>$26.00</p>
@@ -176,7 +184,7 @@ export default function SupermanTShirtMedium(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Color</p>
                     <div className={classes.color}>
                         <p className={classes.desc}>True Royal Blue</p>
@@ -184,9 +192,12 @@ export default function SupermanTShirtMedium(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.patternContainer}>
                     <p className={classes.h2}>Pattern</p>
-                    <p className={classes.desc}>desc</p>
+                    <p className={classes.h3}>Detail</p>
+                    <div className={classes.img}>
+                        <img className={classes.shirtImg} id="Clothing Image" alt="Superman T-Shirt" src={supermanimg}/>
+                    </div>
                 </div>
             </div>
         </div>
