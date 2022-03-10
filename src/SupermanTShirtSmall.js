@@ -58,11 +58,18 @@ const useStyles = makeStyles(({
         height: "fit-content",
         margin: "1rem 0 1rem 1rem",
     },
-    descSection: {
+    descContainer: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         margin: "1rem 0",
+        alignItems: "center"
+    },
+    brandContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        margin: "1rem 0 0.5rem 0",
         alignItems: "center"
     },
     priceContainer: {
@@ -142,7 +149,7 @@ export default function SupermanTShirtSmall(props) {
                 <p className={classes.h1}>Providence Superman T-Shirt</p>
                 <div className={classes.hr}/>
                 <div className={classes.verticalSection}>
-                    <div className={classes.descSection2}>
+                    <div className={classes.brandContainer}>
                         <p className={classes.h2}>Brand</p>
                         <p className={classes.desc}>Parched</p>
                     </div>
@@ -151,17 +158,17 @@ export default function SupermanTShirtSmall(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Category</p>
                     <p className={classes.desc}>Unisex T-Shirt</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Gender</p>
                     <p className={classes.desc}>Unisex</p>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Size</p>
                     <p className={classes.desc}>Small</p>
                 </div>
@@ -176,7 +183,7 @@ export default function SupermanTShirtSmall(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Color</p>
                     <div className={classes.color}>
                         <p className={classes.desc}>True Royal Blue</p>
@@ -184,7 +191,7 @@ export default function SupermanTShirtSmall(props) {
                     </div>
                 </div>
                 <div className={classes.hr}/>
-                <div className={classes.descSection}>
+                <div className={classes.descContainer}>
                     <p className={classes.h2}>Pattern</p>
                     <p className={classes.desc}>desc</p>
                 </div>

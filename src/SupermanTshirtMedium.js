@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(({
     wrap: {
-        backgroundColor: "blue",
+        backgroundColor: "red",
         margin: "0",
         width: "100vw",
         height: "100vh",
