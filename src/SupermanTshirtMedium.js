@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import supermanImg from './img/supermanImg.jpeg';
-import parchedLogo from './img/parchedLogo.png';
+import groupImg from './img/groupImg.png';
 import patternImg from './img/patternImg.png';
 import wash from './img/wash.png';
 import bleach from './img/bleach.png';
@@ -71,6 +70,8 @@ const useStyles = makeStyles(({
     img: {
         width: "100%",
         backgroundColor: "#F4F6F5",
+        display: "flex",
+        justifyContent: "center",
     },
     patternImgContainer: {
         display: "flex",
@@ -79,19 +80,13 @@ const useStyles = makeStyles(({
         backgroundColor: "#F4F6F5",
     },
     shirtImg: {
-        width: "50%",
-        maxWidth: "500px",
-        margin: "0 0 0 25%",
+        width: "100%",
+        maxWidth: "700px",
     },
     patternImg: {
         width: "50%",
         maxWidth: "200px",
         margin: "1rem 0",
-    },
-    parchedLogo: {
-        width: "70px",
-        height: "23.859px",
-        margin: "0 0 40% 0",
     },
     descContainer: {
         display: "flex",
@@ -213,8 +208,7 @@ export default function SupermanTShirtMedium(props) {
                     <p className={classes.h1}>Item Information</p>
                 </div>
                 <div className={classes.img}>
-                    <img className={classes.shirtImg} id="Clothing Image" alt="Superman T-Shirt" src={supermanImg}/>
-                    <img className={classes.parchedLogo} id="Brand Name" alt="Parched" src={parchedLogo}/>
+                    <img className={classes.shirtImg} id="Clothing Image" alt="Superman T-Shirt" src={groupImg}/>
                 </div>
                 <p className={classes.h1}>Providence Superman T-Shirt</p>
                 <div className={classes.hr}/>
