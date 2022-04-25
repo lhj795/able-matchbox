@@ -5,6 +5,7 @@ import SupermanTShirtMedium from "./SupermanTShirtMedium.js";
 import SupermanTShirtLarge from "./SupermanTShirtLarge.js";
 import SupermanTShirtXL from "./SupermanTShirtXL.js";
 import SupermanTShirt2X from "./SupermanTShirt2X.js";
+import UniqloDemo from "./Uniqlo";
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="large" element={<SupermanTShirtLarge/>} />
         <Route path="xl" element={<SupermanTShirtXL/>} />
         <Route path="2x" element={<SupermanTShirt2X/>} />
+        <Route path="uniqlo" element={<UniqloDemo/>} />
       </Routes>
     </Router>
   );
